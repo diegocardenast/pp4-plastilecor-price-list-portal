@@ -26,7 +26,7 @@ Plastilecor is a small business without too much digitalization and a B2B line w
 
 ### Tasks and Planning
 
-Tasks and planning can be seen in the [Plastilecor Price List Portal - GitHub Project](https://github.com/users/diegocardenast/projects/3).
+Tasks and planning can be seen in the [Plastilecor Price List Portal - GitHub Project](https://github.com/diegocardenast/pp4-plastilecor-price-list-portal).
 
 ### Colour
 The colour selection was generated from the company logo: [Plastilecor logo](https://github.com/diegocardenast/pp4-plastilecor-price-list-portal/blob/main/assets/images/plastilecorLogo.jpg). The main HEX code is [#004F1F](https://g.co/kgs/ZfFH1aA).
@@ -50,13 +50,21 @@ __Register__
 
 ## Features
 
-### Implemented Features
+__Price list model__
 
-__Sound ON/OFF__
+  - Description
+  
+**Key** | **Name** | **Type** 
+----------|----------|----------
+-- | ProductCode	| Char(200)
+-- | ProductName | Char(200)
+-- | Dimensions | Char(200)
+-- | Price	| Integer
+ForeignKey  | Author | User model
+-- | CreatedOn | DateTime
+-- | LastModifiedOn | DateTime
 
-  - The full responsive navigation bar includes links to the Game page, Instructions and Contact page, and is identical in each page to allow for easy navigation. 
-
-![Sound ON/OFF](https://github.com/diegocardenast/CodeBusters/blob/main/assets/images/readme/sound-on-off.png)
+![Price list model](https://github.com/diegocardenast/CodeBusters/blob/main/assets/images/readme/sound-on-off.png)
 
 __Index__
 
@@ -90,10 +98,6 @@ __Scoreboard__
   - It saves the scores of the players. 
 
 ![scoreboard](https://github.com/diegocardenast/CodeBusters/blob/main/assets/images/readme/scoreboard.png)
-
-### Features Left to Implement
-- Make the game go faster and provide extra points per killed gost
-- Add bonus points functionality
 
 ## Testing
 
