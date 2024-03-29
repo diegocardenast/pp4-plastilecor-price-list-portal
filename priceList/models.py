@@ -3,14 +3,14 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 
-class ListItem (model.Model):
+class ListItem (models.Model):
     productName = models.CharField(max_length=200, unique=True)
     productCode = models.CharField(max_length=200, unique=True)
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="list_items"
     )
     dimensions = models.CharField(max_length=200, unique=False)
-    price = models.Integer(max_length=200, unique=False)
+    price = models.IntegerField(null=True, unique=False)
     created_on = models.DateTimeField(auto_now_add=True, editable=False)
     lastModified_on = models.DateTimeField(auto_now_add=True, editable=True)
 
