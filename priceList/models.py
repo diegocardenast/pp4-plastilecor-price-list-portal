@@ -3,6 +3,7 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 
+# This is the model to insert products and their prices
 class ListItem (models.Model):
     productName = models.CharField(max_length=200, unique=True)
     productCode = models.CharField(max_length=200, unique=True)
@@ -11,13 +12,13 @@ class ListItem (models.Model):
     )
     dimensions = models.CharField(max_length=200, unique=False)
     price = models.IntegerField(null=True, unique=False)
-    created_on = models.DateTimeField(auto_now_add=True, editable=False)
-    lastModified_on = models.DateTimeField(auto_now_add=True, editable=True)
+    created_on = models.DateTimeField(auto_now_add=True)
+    lastModified_on = models.DateTimeField(auto_now=True)
 
-    # Source: https://stackoverflow.com/questions/4754485/dry-way-to-add-created-modified-by-and-time
-    def save(self):
-        if self.id:
-            self.lastModified_on = datetime.now()
-        else:
-            self.created_on = datetime.now()
-        super(MyModel,self).save()
+    #this part helps to order the list in descending order by product name
+    class Meta:
+        ordering = ["-productName"]
+    
+    def __str__(self):
+        return f"{self.productName} | created by {self.author}"
+
