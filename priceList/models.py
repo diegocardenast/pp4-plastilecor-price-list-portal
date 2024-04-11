@@ -17,7 +17,7 @@ class ListItem (models.Model):
 
     #this part helps to order the list in descending order by product name
     class Meta:
-        ordering = ["-productName"]
+        ordering = ["productName"]
     
     def __str__(self):
         return f"{self.productName} | created by {self.author}"

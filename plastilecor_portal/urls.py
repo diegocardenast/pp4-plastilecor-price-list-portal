@@ -20,6 +20,7 @@ from django.urls import path, include
 
 urlpatterns = [
     #path("priceList/", priceList_views.my_priceList, name='myPriceList'),  -- NOT NEEDED AFTER CREATION OF URLS FOR ALL THE APP
-    path("", include("priceList.urls"), name="priceList-urls"),
     path('admin/', admin.site.urls),
+    path('summernote/', include('django_summernote.urls')),
+    path("", include("priceList.urls"), name="priceList-urls"),
 ]
