@@ -11,8 +11,8 @@
 <body>
     <h1>Price list</h1>
     {% for post in object_list %}
-    <h2>{{post.productName}}</h2>
-    <p>{{post.price}}</p>
+    <h3>{{post.productName}}</h3>
+    <p>Price in COP: {{post.price}}</p>
     <p>Author: {{post.author}}</p>
     {% endfor %}
 </body>

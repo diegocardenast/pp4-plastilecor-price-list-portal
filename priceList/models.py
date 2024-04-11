@@ -15,9 +15,9 @@ class ListItem (models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     lastModified_on = models.DateTimeField(auto_now=True)
 
-    #this part helps to order the list in descending order by product name
+    #this part helps to order the list in descending order by price
     class Meta:
-        ordering = ["productName"]
+        ordering = ["price"]
     
     def __str__(self):
         return f"{self.productName} | created by {self.author}"
