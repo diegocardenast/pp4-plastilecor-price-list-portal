@@ -12,4 +12,6 @@ from .models import ListItem
 
 class PostList(generic.ListView):
     queryset = ListItem.objects.all()
-    template_name = "priceList/price_list.html"
+    # template_name = "priceList/price_list.html" -- NOT NEEDED AFTER CREATING INDEX.html
+    template_name = "priceList/index.html"
+    paginate_by = 6
