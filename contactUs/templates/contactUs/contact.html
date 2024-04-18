@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-12 col-md-6 my-5">
+            <h2>Contact Us!</h2>
+            <p>Whether you have a project in mind, doubts on prices, 
+                or simply want to brainstorm some ideas,
+                we are excited to hear from you. Fill out the form
+                and we will get in touch with you as soon as we can!</p>
+
+            <!-- add your form here. Your submit button should 
+                                have the classes of btn, btn-secondary -->
+            <form method="post">
+                {{ contact_form | crispy }}
+                {% csrf_token %}
+                <button class="btn btn-secondary"
+                    type="submit">Submit
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock content %}
