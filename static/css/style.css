@@ -2,6 +2,7 @@
 
 :root {
     --plastilecor-background: #004F1F;
+    --authorization-margin: 2rem;
 }
 
 
@@ -9,6 +10,9 @@
     background-color: var(--plastilecor-background);
 }
 
+.authorization-margin {
+    margin-right: var(--authorization-margin) !important;
+}
 
 body {
     background-color: #F9FAFC;

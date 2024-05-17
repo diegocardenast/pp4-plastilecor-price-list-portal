@@ -34,7 +34,7 @@
 <body class="d-flex flex-column h-100 main-bg">
 
     <!-- Navigation -->
-    <nav class="navbar plastilecor-background navbar-expand-lg navbar-light">
+    <nav class="navbar plastilecor-background navbar-expand-lg navbar-dark">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
                 aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -43,36 +43,36 @@
             <div class="collapse navbar-collapse" id="navbarText">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == welcome_url %}active{%endif%}" aria-current="page"
+                        <a class="nav-link text-white {% if request.path == welcome_url %}active fw-bold{%endif%}" aria-current="page"
                             href="{% url 'welcome' %}">Home </a>
                     </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == home_url %}active{% endif %}" aria-current="page"
+                        <a class="nav-link text-white {% if request.path == home_url %}active fw-bold{% endif %}" aria-current="page"
                             href="{% url 'priceL' %}">Products List </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page"
+                        <a class="nav-link text-white {% if request.path == logout_url %}active fw-bold{% endif %}" aria-current="page"
                             href="{% url 'account_logout' %}">Logout </a>
                     </li>
                     {% if user.is_superuser %}
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page"
+                        <a class="nav-link text-white {% if request.path == logout_url %}active fw-bold{% endif %}" aria-current="page"
                             href="{% url 'admin:index' %}"> Admin Settings</a>
                     </li>
                     {% endif %}
                     {% else %}
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == signup_url %}active{% endif %}" aria-current="page"
+                        <a class="nav-link text-white {% if request.path == signup_url %}active fw-bold{% endif %}" aria-current="page"
                             href="{% url 'account_signup' %}">Register </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page"
+                        <a class="nav-link text-white {% if request.path == login_url %}active fw-bold{% endif %}" aria-current="page"
                             href="{% url 'account_login' %}">Login </a>
                     </li>
                     {% endif %}
                     <li class="nav-item">
-                        <a class="nav-link {% if request.path == contact_url %}active{% endif %}" aria-current="page"
+                        <a class="nav-link text-white {% if request.path == contact_url %}active fw-bold {% endif %}" aria-current="page"
                             href="{% url 'contact_form' %}"> Contact Us</a>
                     </li>
 
@@ -100,7 +100,7 @@
         {% if user.is_authenticated %}
             <p class="text-end m-3">Hi, {{ user }}</p>
         {% else %}
-            <p class="text-end m-3">You are not logged in</p>
+            <p class="text-end m-3 authorization-margin">You are not logged in</p>
         {% endif %}
         
         {% block content %}
@@ -115,11 +115,6 @@
             {% block copyright %}
             © 2024 Plastilecor - Valle del Cauca, Colombia - All rights reserved
             {% endblock copyright %}
-        </p>
-        <p class="m-0 text-center text-white">Follow us: <i class="fab fa-facebook-square ms-3"></i>
-            <i class="fab fa-twitter-square ms-3"></i>
-            <i class="fab fa-instagram-square ms-3"></i>
-            <i class="fab fa-youtube-square ms-3"></i>
         </p>
     </footer>
 
