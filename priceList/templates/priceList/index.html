@@ -6,7 +6,7 @@
     <div class="row">
       <!-- Blog Entries Column -->
       <h1>Price list</h1>
-      <table class="table">
+      <table class="table table-striped">
         <thead>
           <tr>
             <th scope="col">PRODUCT NAME</th>
@@ -21,7 +21,7 @@
           {% for product in object_list %}
             <tr>
               <th scope="row">
-                <a href="{% url 'product_detail' product.productCode %}">{{ product.productName }}</a>
+                <a class="product-name-color" href="{% url 'product_detail' product.productCode %}">{{ product.productName }}</a>
               </th>
               <td>{{ product.productCode }}</td>
               <td>{{ product.price }}</td>
@@ -37,12 +37,12 @@
         <ul class="pagination justify-content-center">
           {% if page_obj.has_previous %}
             <li>
-              <a href="?page={{ page_obj.previous_page_number }}" class="page-link">&laquo; PREV</a>
+              <a href="?page={{ page_obj.previous_page_number }}" class="btn btn-secondary">&laquo; PREV</a>
             </li>
           {% endif %}
           {% if page_obj.has_next %}
             <li>
-              <a href="?page={{ page_obj.next_page_number }}" class="page-link">NEXT &raquo;</a>
+              <a href="?page={{ page_obj.next_page_number }}" class="btn btn-secondary">NEXT &raquo;</a>
             </li>
           {% endif %}
         </ul>
@@ -51,7 +51,4 @@
   </div>
 {% endblock %}
 
-{% block copyright %}
-  Copyright 2024 Diego Cárdenas
-{% endblock %}
 <!-- index.html content ends here -->

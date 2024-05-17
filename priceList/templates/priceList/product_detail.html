@@ -11,7 +11,7 @@
                 <p class="post-subtitle">{{ product.author }} | {{ product.created_on }}</p>
             </div>
             <div class="d-none d-md-block col-md-6 masthead-image">
-                <img src="{% static 'images/default.jpg' %}" class="scale" alt="placeholder">
+                <img src="{% static 'images/default.jpg' %}" class="scale" alt="Listones-productPicture">
             </div>
         </div>
     </div>
@@ -23,9 +23,10 @@
             <div class="card-body">
                 <!-- The post content goes inside the card-text. -->
                 <!-- Use the | safe filter inside the template tags -->
-                <p class="card-text">
+                <h5 class="card-title">
                    Price in COP: {{ product.price | safe }}
-                </p>
+                </h5>
+                <a href="{% url 'priceL' %}" class="btn btn-secondary">&laquo; BACK</a>
             </div>
         </div>
     </div>
