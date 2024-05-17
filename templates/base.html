@@ -46,6 +46,10 @@
                         <a class="nav-link text-white {% if request.path == welcome_url %}active fw-bold{%endif%}" aria-current="page"
                             href="{% url 'welcome' %}">Home </a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white {% if request.path == contact_url %}active fw-bold {% endif %}" aria-current="page"
+                            href="{% url 'contact_form' %}"> Contact Us</a>
+                    </li>
                     {% if user.is_authenticated %}
                     <li class="nav-item">
                         <a class="nav-link text-white {% if request.path == home_url %}active fw-bold{% endif %}" aria-current="page"
@@ -57,7 +61,7 @@
                     </li>
                     {% if user.is_superuser %}
                     <li class="nav-item">
-                        <a class="nav-link text-white {% if request.path == logout_url %}active fw-bold{% endif %}" aria-current="page"
+                        <a class="nav-link text-white {% if request.path == admin_url %}active fw-bold{% endif %}" aria-current="page"
                             href="{% url 'admin:index' %}"> Admin Settings</a>
                     </li>
                     {% endif %}
@@ -71,10 +75,7 @@
                             href="{% url 'account_login' %}">Login </a>
                     </li>
                     {% endif %}
-                    <li class="nav-item">
-                        <a class="nav-link text-white {% if request.path == contact_url %}active fw-bold {% endif %}" aria-current="page"
-                            href="{% url 'contact_form' %}"> Contact Us</a>
-                    </li>
+                    
 
                 </ul>
             </div>
@@ -98,7 +99,7 @@
     </div>
     <main class="flex-shrink-0 main-bg">
         {% if user.is_authenticated %}
-            <p class="text-end m-3">Hi, {{ user }}</p>
+            <p class="text-end m-3 authorization-margin">Hi, {{ user }}</p>
         {% else %}
             <p class="text-end m-3 authorization-margin">You are not logged in</p>
         {% endif %}
