@@ -1,14 +1,14 @@
 /* change the background color */
 
 :root {
-    --plastilecor-background: #004F1F;
+
     --authorization-margin: 2rem;
     --button-margin: 1rem;
     --product-name-color: #004F1F;
 }
 
 .plastilecor-background {
-    background-color: var(--plastilecor-background);
+    background-color: #004F1F !important;
 }
 
 .authorization-margin {
