@@ -1,23 +1,21 @@
 {% extends 'base.html' %}
 {% block content %}
 {% load static %}
-<div class="container mt-5">
-  <div class="row">
-    <div class="col-4 text-center">
-      <img src="{% static 'images/plastic-padureț-1476320.jpg' %}" width="75%" />
-    </div>
-    <div class="col-8">
-      <!-- Title goes between these h2 tags -->
-      <h2>{{ welcome.welcomeTitle }}</h2>
-      <!-- Content goes directly underneath this -->
-      {{ welcome.content | safe }}
-    </div>
+<div class="row mt-5 d-flex flex-wrap align-items-center">
+  <div class="col-8 text-center mt-5">
+    <!-- Title goes between these h2 tags -->
+    <h2>{{ welcome.welcomeTitle }}</h2>
+    <!-- Content goes directly underneath this -->
+    {{ welcome.content | safe }}
   </div>
-  <div class="row">
+  <div class="col-4 text-left">
+    <img src="{% static 'images/plastic-stick-red.jpg' %}" width="70%" max-width="90%" class="img-fluid" />
+  </div>  
+  <div class="row mt-3">
     <div class="col text-right">
       <!-- Updated on field goes in here -->
       {% if user.is_authenticated %}
-      <p class="text-end"><em>Updated on: {{ welcome.updated_on }}</em></p>
+      <p class="text-end m-3"><em>Updated on: {{ welcome.updated_on }}</em></p>
       {% endif %}
     </div>
   </div>

@@ -23,6 +23,10 @@
     color: var(--product-name-color) !important;
 }
 
+.nav-link:hover {
+    color: #6AA84F !important;
+}
+
 body {
     background-color: #F9FAFC;
 }
