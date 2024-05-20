@@ -66,21 +66,21 @@ ForeignKey  | Author | User model
 
 __Register__
 
-![Register](https://github.com/diegocardenast/CodeBusters/blob/main/assets/images/register-feature.png)
+![Register](https://github.com/diegocardenast/pp4-plastilecor-price-list-portal/blob/main/assets/images/register-feature.png)
 
 __Contact Us__
 
-![ContactUs](https://github.com/diegocardenast/CodeBusters/blob/main/assets/images/Contact-us-feature.png)
+![ContactUs](https://github.com/diegocardenast/pp4-plastilecor-price-list-portal/blob/main/assets/images/Contact-us-feature.png)
 
 __Price List Details__
 
   - The time counter, the name of the schenario, pumpkins (lives) counter and how many ghosts you have hunt are part of the visual tools for the user/player. 
 
-![PriceListDetails](https://github.com/diegocardenast/CodeBusters/blob/main/assets/images/price-list-details-feature.png)
+![PriceListDetails](https://github.com/diegocardenast/pp4-plastilecor-price-list-portal/blob/main/assets/images/price-list-details-feature.png)
 
 __Admin Panel__ 
 
-![AdminPanel](https://github.com/diegocardenast/CodeBusters/blob/main/assets/images/admin-panel-feature.png)
+![AdminPanel](https://github.com/diegocardenast/pp4-plastilecor-price-list-portal/blob/main/assets/images/admin-panel-feature.png)
 
 
 ## Testing
