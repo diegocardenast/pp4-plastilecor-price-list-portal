@@ -104,10 +104,16 @@ __Admin Panel__
 ----------|----------|----------|----------
 Index | Size to 320px using Chrome Dev Tools	| Elements look good @ 320px | Works as expected
 Index | Size to 1920px using Chrome Dev Tools | Elements look good 1920px | Works as expected
-Game | Size to 320px using Chrome Dev Tools	| Elements look good @ 320px | Works as expected
-Game | Size to 1920px using Chrome Dev Tools | Elements look good 1920px | Works as expected
-Index page test | All phone sizes checked using Chrome Dev Tools | Elements look good | Works at expected
-Game page test | All phone sizes checked using Chrome Dev Tools | Elements overlap and game runs faster at lower resolutions | Does not work as expected 
+Login | Login with an admin account	| Notify user about succesfful login and show admin settings options | Works as expected
+Logout | Login from an admin account | Notify user about succesfful logout and hide admin settings options | Works as expected
+Login | Login with a normal account	| Notify user about succesfful login and show products list options | Works as expected
+Logout | Login from a normal account | Notify user about succesfful logout and hide products list options | Works as expected
+Register | Allow users logged out to register into the platform upon admin approval | Form is sent to admin DB | Works as expected
+Contact us | Fill out contact us form with questions | Form information will be saved into the admin DB | Works as expected
+Admin settings | Create and erase a user from the admin panel with an admin account | admin DB will work correctly based on CRUD principles | Works as expected
+Admin settings | Insert and erase a product | admin DB will work correctly based on CRUD principles | Works as expected
+Price list | Visualize the product list as a normal user | interface will render admin DB products correctly | Works as expected
+Price list | Visualize a product detail page as a normal user | interface will render admin DB information correctly | Works as expected
 
 
 
@@ -138,7 +144,7 @@ Game page test | All phone sizes checked using Chrome Dev Tools | Elements overl
   - Inside the Heroku app deploy tab, click on deploy branch
   - Click on View App
 
-The live link can be found [HERE](MISSING LINK)
+The live link can be found [HERE](https://8000-diegocarden-pp4plastile-dl4pq8wxrog.ws-eu114.gitpod.io/)
 
 --- 
 
@@ -149,7 +155,7 @@ The live link can be found [HERE](MISSING LINK)
 - Good/Best practice on the readme were shared by Lauren-Nicole Popich in her [mentoring](https://github.com/CluelessBiker/mentoring/tree/main) GitHub repositry
 - User Stories and tasks creation was implemented following this [publication](https://boosthigh.com/software-requirements-specification/)
 - Use of Google to import [Google fonts](https://fonts.google.com/?classification=Display) 
-- Inspiration of the [institutional color](MISSING LINK)
+- Inspiration of the [institutional color](https://www.plastilecor.com/)
 - The use of GitHub to collaborate and apply good practices was implemented following this [Slack post](https://code-institute-room.slack.com/archives/C05UQAPDNCT/p1697457705802579) and this [GitHub post](https://github.com/auxfuse/hackathon-git-labs/blob/main/basic.md)
 
 ### Media
