@@ -144,7 +144,7 @@ Price list | Visualize a product detail page as a normal user | interface will r
   - Inside the Heroku app deploy tab, click on deploy branch
   - Click on View App
 
-The live link can be found [HERE](https://8000-diegocarden-pp4plastile-dl4pq8wxrog.ws-eu114.gitpod.io/)
+The live link can be found [HERE](https://plastilecor-portal-pp4-b72037813267.herokuapp.com/)
 
 --- 
 
