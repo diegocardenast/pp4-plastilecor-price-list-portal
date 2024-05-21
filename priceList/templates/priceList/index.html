@@ -1,54 +1,63 @@
+<!DOCTYPE html>
+<html class="h-100" lang="en">
+
+<head>
+  <title>Plastilecor Portal</title>
+</head>
+
 {% extends 'base.html' %}
 
 {% block content %}
-  <!-- index.html content starts here -->
-  <div class="container-fluid">
-    <div class="row">
-      <!-- Blog Entries Column -->
-      <h1>Price list</h1>
-      <table class="table table-striped">
-        <thead>
+<!-- index.html content starts here -->
+<div class="container-fluid">
+  <div class="row">
+    <!-- Blog Entries Column -->
+    <h1>Price list</h1>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">PRODUCT NAME</th>
+          <th scope="col">CODE</th>
+          <th scope="col">PRICE IN COP</th>
+          <th scope="col">CREATED BY</th>
+          <th scope="col">CREATED ON</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for product in object_list %}
           <tr>
-            <th scope="col">PRODUCT NAME</th>
-            <th scope="col">CODE</th>
-            <th scope="col">PRICE IN COP</th>
-            <th scope="col">CREATED BY</th>
-            <th scope="col">CREATED ON</th>
+            <td scope="row">
+              <a class="product-name-color"
+                href="{% url 'product_detail' product.productCode %}">{{ product.productName }}</a>
+            </td>
+            <td>{{ product.productCode }}</td>
+            <td>{{ product.price }}</td>
+            <td>{{ product.author }}</td>
+            <td>{{ product.created_on }}</td>
           </tr>
-        </thead>
-
-        <tbody>
-          {% for product in object_list %}
-            <tr>
-              <th scope="row">
-                <a class="product-name-color" href="{% url 'product_detail' product.productCode %}">{{ product.productName }}</a>
-              </th>
-              <td>{{ product.productCode }}</td>
-              <td>{{ product.price }}</td>
-              <td>{{ product.author }}</td>
-              <td>{{ product.created_on }}</td>
-            </tr>
-          {% endfor %}
-        </tbody>
-      </table>
-    </div>
-    {% if is_paginated %}
-      <nav aria-label="Page navigation">
-        <ul class="pagination justify-content-center">
-          {% if page_obj.has_previous %}
-            <li>
-              <a href="?page={{ page_obj.previous_page_number }}" class="btn btn-secondary">&laquo; PREV</a>
-            </li>
-          {% endif %}
-          {% if page_obj.has_next %}
-            <li>
-              <a href="?page={{ page_obj.next_page_number }}" class="btn btn-secondary">NEXT &raquo;</a>
-            </li>
-          {% endif %}
-        </ul>
-      </nav>
-    {% endif %}
+        {% endfor %}
+      </tbody>
+    </table>
   </div>
+  {% if is_paginated %}
+  <nav aria-label="Page navigation">
+    <ul class="pagination justify-content-center">
+      {% if page_obj.has_previous %}
+      <li>
+        <a href="?page={{ page_obj.previous_page_number }}" class="btn btn-secondary">&laquo; PREV</a>
+      </li>
+      {% endif %}
+      {% if page_obj.has_next %}
+      <li>
+        <a href="?page={{ page_obj.next_page_number }}" class="btn btn-secondary">NEXT &raquo;</a>
+      </li>
+      {% endif %}
+    </ul>
+  </nav>
+  {% endif %}
+</div>
 {% endblock %}
 
 <!-- index.html content ends here -->
+
+</html>

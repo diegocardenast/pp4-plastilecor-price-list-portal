@@ -1,17 +1,17 @@
-from django.shortcuts import render, get_object_or_404 
+from django.shortcuts import render, get_object_or_404
 # from django.http import HttpResponse -- NOT NEEDED AFTER CREATING THE VIEWS
 from django.views import generic
 from .models import ListItem
 
 
-#def my_priceList(request):
-#    return HttpResponse("Hello, Plastilecor!")  -- NOT NEEDED AFTER CREATING THE VIEWS
+# def my_priceList(request):
+# return HttpResponse("Hello, Plastilecor!")--NOT NEEDED AFTER CREATING VIEWS
 
 # Create your views here.
 
 class PostList(generic.ListView):
     queryset = ListItem.objects.all()
-    # template_name = "priceList/price_list.html" -- NOT NEEDED AFTER CREATING INDEX.html
+    # template_name = "priceList/price_list.html"--NOT NEEDED AFTER INDEX.html
     template_name = "priceList/index.html"
     paginate_by = 6
 

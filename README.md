@@ -97,7 +97,7 @@ __Admin Panel__
   - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?)
 - Lighthouse
   - The result given by the system for the lighthouse assessment is the following:
-![Lighthouse results](https://github.com/diegocardenast/CodeBusters/blob/main/assets/images/lighthouse-test.png)
+![Lighthouse results](https://github.com/diegocardenast/pp4-plastilecor-price-list-portal/blob/main/assets/images/lighthouse-test.png)
 
 ### Manual Testing
 **TEST** | **ACTION** | **EXPECTATION** | **RESULT** 
