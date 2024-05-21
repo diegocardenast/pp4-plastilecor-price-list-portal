@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import WelcomePage
 
+
 # Create your views here.
 def welcome_me(request):
     """
