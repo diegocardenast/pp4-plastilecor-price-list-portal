@@ -15,8 +15,7 @@ def contact_us(request):
             messages.add_message(
                 request,
                 messages.SUCCESS,
-                "Request received! We will be in contact with you as"
-                - " soon as we can."
+                "Request received! We will be in contact with you as soon as we can."
             )
 
     contact_form = ContactForm()

@@ -105,10 +105,10 @@ __Admin Panel__
 Index | Size to 320px using Chrome Dev Tools	| Elements look good @ 320px | Works as expected
 Index | Size to 1920px using Chrome Dev Tools | Elements look good 1920px | Works as expected
 Login | Login with an admin account	| Notify user about succesfful login and show admin settings options | Works as expected
-Logout | Login from an admin account | Notify user about succesfful logout and hide admin settings options | Works as expected
+Logout | Logout from an admin account | Notify user about succesfful logout and hide admin settings options | Works as expected
 Login | Login with a normal account	| Notify user about succesfful login and show products list options | Works as expected
 Logout | Login from a normal account | Notify user about succesfful logout and hide products list options | Works as expected
-Register | Allow users logged out to register into the platform upon admin approval | Form is sent to admin DB | Works as expected
+Register | Allow users logged out to register into the platform | Form is saved into admin DB | Works as expected
 Contact us | Fill out contact us form with questions | Form information will be saved into the admin DB | Works as expected
 Admin settings | Create and erase a user from the admin panel with an admin account | admin DB will work correctly based on CRUD principles | Works as expected
 Admin settings | Insert and erase a product | admin DB will work correctly based on CRUD principles | Works as expected
