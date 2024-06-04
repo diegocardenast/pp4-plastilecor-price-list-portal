@@ -5,6 +5,7 @@
     --authorization-margin: 2rem;
     --button-margin: 1rem;
     --product-name-color: #004F1F;
+    --index-image-width: 425px;
 }
 
 .plastilecor-background {
@@ -185,4 +186,12 @@ body {
 
 .approval {
     color: rgb(222, 146, 168);
+}
+
+/* Custom CSS for index image size control */
+@media (min-width: 450px) {
+    .responsive-img {
+        max-width: var(--index-image-width);
+        height: auto;
+    }
 }

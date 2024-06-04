@@ -13,31 +13,33 @@
   <div class="row">
     <!-- Blog Entries Column -->
     <h1>Price list</h1>
-    <table class="table table-striped">
-      <thead>
-        <tr>
-          <th scope="col">PRODUCT NAME</th>
-          <th scope="col">CODE</th>
-          <th scope="col">PRICE IN COP</th>
-          <th scope="col">CREATED BY</th>
-          <th scope="col">CREATED ON</th>
-        </tr>
-      </thead>
-      <tbody>
-        {% for product in object_list %}
+    <div class="table-responsive">
+      <table class="table table-striped">
+        <thead>
           <tr>
-            <td scope="row">
-              <a class="product-name-color"
-                href="{% url 'product_detail' product.productCode %}">{{ product.productName }}</a>
-            </td>
-            <td>{{ product.productCode }}</td>
-            <td>{{ product.price }}</td>
-            <td>{{ product.author }}</td>
-            <td>{{ product.created_on }}</td>
+            <th scope="col">PRODUCT NAME</th>
+            <th scope="col">CODE</th>
+            <th scope="col">PRICE IN COP</th>
+            <th scope="col">CREATED BY</th>
+            <th scope="col">CREATED ON</th>
           </tr>
-        {% endfor %}
-      </tbody>
-    </table>
+        </thead>
+        <tbody>
+          {% for product in object_list %}
+            <tr>
+              <td scope="row">
+                <a class="product-name-color"
+                  href="{% url 'product_detail' product.productCode %}">{{ product.productName }}</a>
+              </td>
+              <td>{{ product.productCode }}</td>
+              <td>{{ product.price }}</td>
+              <td>{{ product.author }}</td>
+              <td>{{ product.created_on }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
   </div>
   {% if is_paginated %}
   <nav aria-label="Page navigation">
