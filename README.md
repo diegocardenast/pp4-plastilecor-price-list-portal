@@ -124,7 +124,6 @@ Price list | Visualize a product detail page as a normal user | interface will r
   - Create Django Apps and Views, as well as configure settings.py
   - Push the latest changes to the GitHub repository
   - Inside the Heroku account, create a new app with a unique name (in this case **project-plastilecor-portal**)
-  - Inside the Heroku app settings tab, reveal the **config vars** and Add a key of **DISABLE_COLLECTSTATIC** and a value of **1**
   - Install a production-ready webserver for Heroku running this command inside the gitpod terminal **pip3 install gunicorn~=20.1**
   - Add **gunicorn==20.1.0** to the **requirements.txt** file with the following command **pip3 freeze --local > requirements.txt**
   - Inside the Heroku app settings tab, create a _Config Var_ called `PORT`. Set this to `8000`
