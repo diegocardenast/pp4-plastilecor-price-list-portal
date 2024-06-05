@@ -29,8 +29,12 @@ Plastilecor is a small business without too much digitalization and a B2B line w
 Tasks and planning can be seen in the [Plastilecor Price List Portal - GitHub Project](https://github.com/diegocardenast/pp4-plastilecor-price-list-portal).
 
 ### Colour
+
 The colour selection was generated from the company logo: [Plastilecor logo](https://github.com/diegocardenast/pp4-plastilecor-price-list-portal/blob/main/assets/images/plastilecorLogo.jpg). The main HEX code is [#004F1F](https://g.co/kgs/ZfFH1aA).
 
+## Database Model
+
+![Database Model](https://github.com/diegocardenast/pp4-plastilecor-price-list-portal/blob/main/assets/images/drawSQL-pp4.png)
 
 ## Wireframes
 
@@ -47,22 +51,7 @@ __Price List__
 ![PriceList](https://github.com/diegocardenast/pp4-plastilecor-price-list-portal/blob/main/assets/images/price-list-wireframe.png)
 
 
-
 ## Features
-
-__Price list model__
-
-  - Description
-  
-**Key** | **Name** | **Type** 
-----------|----------|----------
--- | ProductCode	| Char(200)
--- | ProductName | Char(200)
--- | Dimensions | Char(200)
--- | Price	| Integer
-ForeignKey  | Author | User model
--- | CreatedOn | DateTime
--- | LastModifiedOn | DateTime
 
 __Register__
 
@@ -78,9 +67,11 @@ __Price List Details__
 
 ![PriceListDetails](https://github.com/diegocardenast/pp4-plastilecor-price-list-portal/blob/main/assets/images/price-list-details-feature.png)
 
-__Admin Panel__ 
+__CRUD Functionality__ 
 
-![AdminPanel](https://github.com/diegocardenast/pp4-plastilecor-price-list-portal/blob/main/assets/images/admin-panel-feature.png)
+![AddProduct](https://github.com/diegocardenast/pp4-plastilecor-price-list-portal/blob/main/assets/images/AddProduct.png)
+
+![EditDeleteProduct](https://github.com/diegocardenast/pp4-plastilecor-price-list-portal/blob/main/assets/images/EditDeleteProduct.png)
 
 
 ## Testing
@@ -88,11 +79,8 @@ __Admin Panel__
 ### Validator Testing
 - Python
   - No errors were returned when passing through the official [pep8ci validator](https://pep8ci.herokuapp.com/)  
-- JavaScript
-  - No errors were returned when passing through the official [JSHint validator](https://jshint.com/)
 - HTML
-  - One error related to invalid attributes for an img element was returned when passing the first time through the official [W3C validator](https://validator.w3.org/)
-  - No errors were returned when passing the second time through the official [W3C validator](https://validator.w3.org/)
+  - No errors were returned when passing through the official [W3C validator](https://validator.w3.org/)
 - CSS
   - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?)
 - Lighthouse
@@ -111,7 +99,9 @@ Logout | Login from a normal account | Notify user about succesfful logout and h
 Register | Allow users logged out to register into the platform | Form is saved into admin DB | Works as expected
 Contact us | Fill out contact us form with questions | Form information will be saved into the admin DB | Works as expected
 Admin settings | Create and erase a user from the admin panel with an admin account | admin DB will work correctly based on CRUD principles | Works as expected
-Admin settings | Insert and erase a product | admin DB will work correctly based on CRUD principles | Works as expected
+Add Product | Create a product | admin DB will work correctly based on CRUD principles | Works as expected
+Edit Product | Update a product | admin DB will work correctly based on CRUD principles | Works as expected
+Delete Product | Delete a product | admin DB will work correctly based on CRUD principles | Works as expected
 Price list | Visualize the product list as a normal user | interface will render admin DB products correctly | Works as expected
 Price list | Visualize a product detail page as a normal user | interface will render admin DB information correctly | Works as expected
 
@@ -153,6 +143,7 @@ The live link can be found [HERE](https://plastilecor-portal-pp4-b72037813267.he
 ### Content 
 
 - Good/Best practice on the readme were shared by Lauren-Nicole Popich in her [mentoring](https://github.com/CluelessBiker/mentoring/tree/main) GitHub repositry
+- CRUD functionality support found in the videos of [Dee Mc YouTube channel](https://www.youtube.com/@IonaFrisbee)
 - User Stories and tasks creation was implemented following this [publication](https://boosthigh.com/software-requirements-specification/)
 - Use of Google to import [Google fonts](https://fonts.google.com/?classification=Display) 
 - Inspiration of the [institutional color](https://www.plastilecor.com/)
@@ -161,6 +152,7 @@ The live link can be found [HERE](https://plastilecor-portal-pp4-b72037813267.he
 ### Media
 
 - The wireframes were created using [Balsamiq Cloud](https://balsamiq.cloud/)
+- The Database model was created using [DrawSQL](https://drawsql.app/)
 
 
 
