@@ -12,9 +12,9 @@
     <div class="container">
         <div class="row g-0">
             <div class="col-md-6 masthead-text">
-                <!-- Post title goes in these h1 tags -->
+                <!-- Product name goes in these h1 tags -->
                 <h1 class="post-title">{{ product.productName }}</h1>
-                <!-- Post author goes before the | the post's created date goes after -->
+                <!-- Product author goes before the | the post's created date goes after -->
                 <p class="post-subtitle">{{ product.author }} | {{ product.created_on }}</p>
             </div>
             <div class="d-none d-md-block col-md-6 masthead-image">
@@ -28,12 +28,21 @@
     <div class="row">
         <div class="col card mb-4  mt-3 left  top">
             <div class="card-body">
-                <!-- The post content goes inside the card-text. -->
-                <!-- Use the | safe filter inside the template tags -->
+                <!-- Product price is shown inside the card body -->
                 <h5 class="card-title">
                    Price in COP: {{ product.price | safe }}
                 </h5>
-                <a href="{% url 'priceL' %}" class="btn btn-secondary mt-3">&laquo; BACK</a>
+                <!-- This conditional provides extra CRUD options to superusers -->
+                 
+                <div class="text-center">
+                    <a href="{% url 'priceL' %}" class="btn btn-secondary mt-3">&laquo; BACK</a>
+                    {% if user.is_superuser %}
+                    <a href="{% url 'edit_product' product.id %}" class="btn btn-secondary mt-3">Edit</a>
+                    <a href="{% url 'delete_product' product.id %}" class="btn btn-secondary mt-3">Delete</a>
+                    {% endif %}
+                </div>
+                
+                
             </div>
         </div>
     </div>

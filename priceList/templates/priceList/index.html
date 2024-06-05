@@ -11,7 +11,6 @@
 <!-- index.html content starts here -->
 <div class="container-fluid">
   <div class="row">
-    <!-- Blog Entries Column -->
     <h1>Price list</h1>
     <div class="table-responsive">
       <table class="table table-striped">
@@ -25,6 +24,7 @@
           </tr>
         </thead>
         <tbody>
+          <!-- This is a for loop that renders the items inside the products list -->
           {% for product in object_list %}
             <tr>
               <td scope="row">

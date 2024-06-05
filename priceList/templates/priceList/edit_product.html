@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+
+
+{% block title %}Edit Product{% endblock %} 
+
+{% block content %}
+<!-- This page allows to update an existing item inside the database -->
+<div class="container">
+    <form method="POST" enctype="multipart/form-data" class="p-2 form">
+        <h1 class="text-center">Edit Product</h1>
+        {% csrf_token %}
+        {{ form.media }} 
+        {{ form | crispy }}
+        <div class="text-center">
+            <a href="{% url 'priceL' %}" class="btn btn-secondary mt-2">&laquo; Back</a>
+            <button type="submit" class="btn btn-secondary mt-2">Edit Product</button>
+        </div>
+    </form>
+</div>
+{% endblock %}

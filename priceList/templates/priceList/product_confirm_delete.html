@@ -1,0 +1,20 @@
+{% extends "base.html" %} 
+{% load static %}
+
+{% block title %}Delete recipe {{ object.title }}{% endblock %} 
+
+{% block content %}
+<!-- This block is a confirmation page before permanently delete the product -->
+<div class="container">
+    <h1 class="text-center mt-2">Confirm Product Deletion</h1>
+    <div class="d-flex justify-content-center pt-3">
+        <form method="post" class="text-center">
+            {% csrf_token %} 
+            <p>Are you sure you want to delete "{{object.productName}}"?</p>
+            <a href="{% url 'priceL' %}" class="btn btn-secondary mt-3">&laquo; Cancel</a>
+            <input type="submit" value="Confirm" class="btn btn-secondary mt-3">
+            
+        </form>
+    </div>
+</div>
+{% endblock %}
