@@ -5,9 +5,8 @@ from .forms import ContactForm
 
 # Create your views here.
 
-
+"""POST Handling"""
 def contact_us(request):
-    # POST handling.
     if request.method == "POST":
         contact_form = ContactForm(data=request.POST)
         if contact_form.is_valid():
