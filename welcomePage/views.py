@@ -4,9 +4,7 @@ from .models import WelcomePage
 
 # Create your views here.
 def welcome_me(request):
-    """
-    Renders the Welcome-Home page
-    """
+    """ Renders the Welcome-Home page """
     welcome = WelcomePage.objects.all().order_by('-updated_on').first()
 
     return render(

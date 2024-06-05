@@ -50,6 +50,7 @@
                         <a class="nav-link text-white {% if request.path == contact_url %}active fw-bold {% endif %}" aria-current="page"
                             href="{% url 'contact_form' %}"> Contact Us</a>
                     </li>
+                    <!-- Conditional shows this navigation options if user is authenticated -->
                     {% if user.is_authenticated %}
                     <li class="nav-item">
                         <a class="nav-link text-white {% if request.path == home_url %}active fw-bold{% endif %}" aria-current="page"
@@ -59,7 +60,12 @@
                         <a class="nav-link text-white {% if request.path == logout_url %}active fw-bold{% endif %}" aria-current="page"
                             href="{% url 'account_logout' %}">Logout </a>
                     </li>
+                    <!-- Conditional shows this navigation options if user is a superuser -->
                     {% if user.is_superuser %}
+                    <li class="nav-item">
+                        <a class="nav-link text-white {% if request.path == add_product %}active fw-bold{% endif %}" aria-current="page"
+                            href="{% url 'add_product' %}"> Add Product</a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link text-white {% if request.path == admin_url %}active fw-bold{% endif %}" aria-current="page"
                             href="{% url 'admin:index' %}"> Admin Settings</a>
@@ -98,6 +104,7 @@
         </div>
     </div>
     <main class="flex-shrink-0 main-bg">
+        <!-- Welcome message if user is authenticated -->
         {% if user.is_authenticated %}
             <p class="text-end m-3 authorization-margin">Hi, {{ user }}</p>
         {% else %}

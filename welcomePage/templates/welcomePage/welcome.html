@@ -36,7 +36,7 @@
 </div>
 <div class="row mt-1">
   <div class="col text-right">
-    <!-- Updated on field goes in here -->
+    <!-- Conditional to render last update date of the page if the user is authenticated -->
     {% if user.is_authenticated %}
     <p class="text-end m-3"><em>Updated on: {{ welcome.updated_on }}</em></p>
     {% endif %}
