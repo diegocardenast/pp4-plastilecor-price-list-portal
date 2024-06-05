@@ -77,6 +77,7 @@ __CRUD Functionality__
 ## Testing
 
 ### Validator Testing
+- All relevant files were tested.
 - Python
   - No errors were returned when passing through the official [pep8ci validator](https://pep8ci.herokuapp.com/)  
 - HTML
