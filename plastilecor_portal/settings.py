@@ -30,6 +30,7 @@ ALLOWED_HOSTS = [
     '8000-diegocarden-pp4plastile-dl4pq8wxrog.ws-us110.gitpod.io',
     '8000-diegocarden-pp4plastile-dl4pq8wxrog.ws-eu111.gitpod.io',
     '8000-diegocarden-pp4plastile-dl4pq8wxrog.ws-eu114.gitpod.io',
+    '8000-diegocarden-pp4plastile-dl4pq8wxrog.ws-eu115.gitpod.io',
     '.herokuapp.com',
 ]
 

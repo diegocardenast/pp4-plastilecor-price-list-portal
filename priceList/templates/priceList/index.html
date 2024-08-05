@@ -21,6 +21,9 @@
             <th scope="col">PRICE IN COP</th>
             <th scope="col">CREATED BY</th>
             <th scope="col">CREATED ON</th>
+            {% if user.is_superuser %}
+            <th scope="col">OPTIONS</th>
+            {% endif %}
           </tr>
         </thead>
         <tbody>
@@ -35,6 +38,12 @@
               <td>{{ product.price }}</td>
               <td>{{ product.author }}</td>
               <td>{{ product.created_on }}</td>
+              <td>
+                {% if user.is_superuser %}
+                <a href="{% url 'edit_product' product.id %}" class="btn btn-secondary mt-3">Edit</a>
+                <a href="{% url 'delete_product' product.id %}" class="btn btn-secondary mt-3">Delete</a>
+                {% endif %}
+              </td>
             </tr>
           {% endfor %}
         </tbody>
