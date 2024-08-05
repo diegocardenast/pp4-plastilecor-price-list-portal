@@ -11,6 +11,7 @@ from django.contrib.auth.mixins import (
     UserPassesTestMixin, LoginRequiredMixin
 )
 from .forms import ProductForm
+from django.contrib.auth.models import User
 
 class PostList(generic.ListView):
     """ View all products """
@@ -39,7 +40,7 @@ class AddProduct(LoginRequiredMixin, CreateView):
     success_url = reverse_lazy('priceL')
 
     def form_valid(self, form):
-        form.instance.user = self.request.user
+        form.instance.author = self.request.user
         return super(AddProduct, self).form_valid(form)
 
 class EditProduct(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
