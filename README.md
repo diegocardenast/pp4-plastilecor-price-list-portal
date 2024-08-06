@@ -26,7 +26,7 @@ Plastilecor is a small business without too much digitalization and a B2B line w
 
 ### Tasks and Planning
 
-Tasks and planning can be seen in the [Plastilecor Price List Portal - GitHub Project](https://github.com/diegocardenast/pp4-plastilecor-price-list-portal).
+Tasks and planning can be seen in the [Plastilecor Price List Portal - GitHub Project](https://github.com/users/diegocardenast/projects/3).
 
 ### Colour
 
@@ -34,7 +34,7 @@ The colour selection was generated from the company logo: [Plastilecor logo](htt
 
 ## Database Model
 
-![Database Model](https://github.com/diegocardenast/pp4-plastilecor-price-list-portal/blob/main/assets/images/drawSQL-pp4.png)
+![Database Model](https://github.com/diegocardenast/pp4-plastilecor-price-list-portal/blob/main/assets/erd/erd.png)
 
 ## Wireframes
 
@@ -152,7 +152,7 @@ The live link can be found [HERE](https://plastilecor-portal-pp4-b72037813267.he
 ### Media
 
 - The wireframes were created using [Balsamiq Cloud](https://balsamiq.cloud/)
-- The Database model was created using [DrawSQL](https://drawsql.app/)
+- The Database model was created using [Graphviz, django-extensions, pyparsing and pydot](https://www.wplogout.com/export-database-diagrams-erd-from-django/)
 
 
 

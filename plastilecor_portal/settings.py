@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'crispy_bootstrap5',
     'django_summernote',
+    'django_extensions',
     'priceList',
     'welcomePage',
     'contactUs'
@@ -131,6 +132,13 @@ AUTH_PASSWORD_VALIDATORS = [
 
 # Needed to avoid error 500 on email verification
 ACCOUNT_EMAIL_VERIFICATION = 'none'
+
+# ERD graph
+GRAPH_MODELS = {
+  'all_applications': True,
+  'group_models': True,
+}
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
