@@ -34,7 +34,7 @@ The colour selection was generated from the company logo: [Plastilecor logo](htt
 
 ## Database Model
 
-![Database Model](https://github.com/diegocardenast/pp4-plastilecor-price-list-portal/blob/main/assets/erd/erd.png)
+![Database Model](https://github.com/diegocardenast/pp4-plastilecor-price-list-portal/blob/main/assets/erd/erd2.png)
 
 ## Wireframes
 
