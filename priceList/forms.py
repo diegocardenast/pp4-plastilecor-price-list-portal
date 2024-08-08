@@ -10,13 +10,17 @@ class ProductForm(forms.ModelForm):
         fields = [
             "productName",
             "productCode",
-            "dimensions",
+            "heightDimension",
+            "widthDimension",
+            "lengthDimension",
             "price",
         ]
 
         labels = {
             "productName": "Name of the Product",
             "productCode": "Code of the Product",
-            "dimensions": "Dimensions of the Product in mm (W x H x L)",
+            "heightDimension": "Height in mm",
+            "widthDimension": "Width in mm",
+            "lengthDimension": "Length in mm",
             "price": "Price of the Product in COP",
         }

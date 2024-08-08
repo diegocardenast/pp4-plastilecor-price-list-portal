@@ -8,7 +8,10 @@ class ListItem (models.Model):
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="list_items"
     )
-    dimensions = models.CharField(max_length=200, unique=False)
+    heightDimension = models.IntegerField(null=True, unique=False)
+    widthDimension = models.IntegerField(null=True, unique=False)
+    lengthDimension = models.IntegerField(null=True, unique=False)
+
     price = models.IntegerField(null=True, unique=False)
     created_on = models.DateTimeField(auto_now_add=True)
     lastModified_on = models.DateTimeField(auto_now=True)

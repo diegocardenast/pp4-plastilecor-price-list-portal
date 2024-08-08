@@ -32,6 +32,16 @@
                 <h5 class="card-title">
                    Price in COP: {{ product.price | safe }}
                 </h5>
+                <p class ="card-text">
+                    Height in mm: {{ product.heightDimension | safe }}
+                </p>
+                <p class ="card-text">
+                    Width in mm: {{ product.widthDimension | safe }}
+                </p>
+                <p class ="card-text">
+                    Length in mm: {{ product.lengthDimension | safe }}
+                </p>
+                   
                 <!-- This conditional provides extra CRUD options to superusers -->
                  
                 <div class="text-center">

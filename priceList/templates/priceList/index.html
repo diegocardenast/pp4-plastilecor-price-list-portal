@@ -19,6 +19,9 @@
             <th scope="col">PRODUCT NAME</th>
             <th scope="col">CODE</th>
             <th scope="col">PRICE IN COP</th>
+            <th scope="col">HEIGHT in mm</th>
+            <th scope="col">WIDTH in mm</th>
+            <th scope="col">LENGTH in mm</th>
             <th scope="col">CREATED BY</th>
             <th scope="col">CREATED ON</th>
             {% if user.is_superuser %}
@@ -36,6 +39,9 @@
               </td>
               <td>{{ product.productCode }}</td>
               <td>{{ product.price }}</td>
+              <td>{{ product.heightDimension }}</td>
+              <td>{{ product.widthDimension }}</td>
+              <td>{{ product.lengthDimension }}</td>
               <td>{{ product.author }}</td>
               <td>{{ product.created_on }}</td>
               <td>
